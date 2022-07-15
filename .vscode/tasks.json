@@ -1,0 +1,56 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "pub_get",
+			"type": "flutter",
+			"command": "flutter",
+			"group": "build",
+			"runOptions": {
+				"instanceLimit": 1,
+				"reevaluateOnRerun": false,
+			},
+			"args": [
+				"pub",
+				"get"
+			],
+			"presentation": {
+				"echo": true,
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+				"clear": false,
+			},
+			"problemMatcher": [
+				"$dart-build_runner"
+			],
+		},
+		{
+			"label": "generate_files",
+			"type": "flutter",
+			"command": "flutter",
+			"group": "build",
+			"runOptions": {
+				"instanceLimit": 1,
+				"reevaluateOnRerun": false,
+			},
+			"args": [
+				"pub",
+				"run",
+				"build_runner",
+				"build",
+				"--delete-conflicting-outputs"
+			],
+			"presentation": {
+				"echo": true,
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+				"clear": false,
+			},
+			"problemMatcher": [
+				"$dart-build_runner"
+			],
+		},
+	]
+}
